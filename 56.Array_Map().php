@@ -19,15 +19,22 @@
 // ];
 
 // $array1 = array("a","green", "3","red", "c","blue", "7" ,"yellow", "8","green");
-echo "<pre>";
-$array1 = array("a" => "green", "3" => "red", "c" => "blue", "7" =>  "yellow", "8" => "green");
 
-// $result = array_values($array1);
-// $result = array_column($stu,"Physics","Chemistry");
-// $result = array_column($stu,"Chemistry");
-// $result = array_chunk($array1,2);
-// $result = array_chunk($array1,3);
-$result = array_chunk($array1,3,true);
+// function square($n ,$m){
+function square($n){
+// return "$n for $m";
+// return [$n => $m]; // mutidimentional operator
+// return strtoupper($n) ; 
+return strtolower($n) ; 
+}
+$array1 = array("a" => "green", "3" => "red", "c" => "blue", "7" =>  "yellow", "8" => "green");
+// $a = [1,2,3,4,"veggi",6];
+// $b = ["red","blue","green","yellow","white",];
+
+// $result = array_map("square", $a, $b);
+$result = array_map("square", $array1);
+
+echo "<pre>";
 print_r($result);
 echo "</pre>";
 
